@@ -16,8 +16,8 @@
     <div class="container">
       <div class="menu">
         <ul>
-          <li><a href="/">Strona główna</a></li>
-          <li><a href="/?action=create">Nowa notatka</a></li>
+          <li><a href="/systemNotes/">Strona główna</a></li>
+          <li><a href="/systemNotes/?action=create">Nowa notatka</a></li>
         </ul>
       </div>
 

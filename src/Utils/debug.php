@@ -7,12 +7,13 @@ ini_set('display_errors', '1');
 
 function dump($data)
 {
-  echo '<br/><div 
+  echo '<br/><div
     style="
-      display: inline-block;
-      padding: 0 10px;
-      border: 1px solid gray;
-      background: lightgray;
+    display: inline-block;
+    padding: 1px 10px;
+    margin: 5px;
+    border: 1px dashed gray;
+    background: lightgray;
     "
   >
   <pre>';

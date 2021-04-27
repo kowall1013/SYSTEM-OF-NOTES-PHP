@@ -152,7 +152,7 @@ class NoteModel extends AbstractModel implements ModelInterface
       }
 
       $query = "
-        SELECT id, title, created 
+        SELECT id, title, created
         FROM notes
         $wherePart
         ORDER BY $sortBy $sortOrder

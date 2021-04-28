@@ -22,7 +22,7 @@
     <?php else : ?>
       <div>
         Brak danych do wyświetlenia
-        <a href="/"><button>Powrót do listy notatek</button></a>
+        <a href="/systemNotes/"><button>Powrót do listy notatek</button></a>
       </div>
     <?php endif; ?>
   </div>

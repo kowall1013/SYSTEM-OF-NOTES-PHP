@@ -5,8 +5,8 @@ declare(strict_types=1);
 spl_autoload_register(function (string $classNamespace){
   $path = str_replace(['\\','App/'],['/',''],$classNamespace);
   $path = "src/$path.php";
-
   require_once($path);
+  require_once("src/Utils/View.php");
 });
 
 require_once("src/Utils/debug.php");
@@ -22,7 +22,7 @@ use App\Request;
 
 
 
-$request = new Request($_GET, $_POST);
+$request = new Request($_GET, $_POST,[]);
 
 try {
   AbstractController::initConfiguration($configuration);

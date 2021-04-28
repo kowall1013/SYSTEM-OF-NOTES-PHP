@@ -47,7 +47,7 @@
     ?>
 
     <div>
-      <form class="settings-form" action="/" method="GET">
+      <form class="settings-form" action="/systemNotes/" method="GET">
         <div>
           <label>Wyszukaj: <input type="text" name="phrase" value="<?php echo $phrase ?>" /></label>
         </div>

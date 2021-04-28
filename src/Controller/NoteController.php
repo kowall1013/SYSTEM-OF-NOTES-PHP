@@ -16,7 +16,7 @@ class NoteController extends AbstractController
         'description' => $this->request->postParam('description')
       ];
       $this->noteModel->create($noteData);
-      $this->redirect('/', ['before' => 'created']);
+      $this->redirect('/systemNotes/', ['before' => 'created']);
     }
 
     $this->view->render('create');
@@ -77,7 +77,7 @@ class NoteController extends AbstractController
         'description' => $this->request->postParam('description')
       ];
       $this->noteModel->edit($noteId, $noteData);
-      $this->redirect('/', ['before' => 'edited']);
+      $this->redirect('/systemNotes/', ['before' => 'edited']);
     }
 
     $this->view->render(
@@ -91,7 +91,7 @@ class NoteController extends AbstractController
     if ($this->request->isPost()) {
       $id = (int) $this->request->postParam('id');
       $this->noteModel->delete($id);
-      $this->redirect('/', ['before' => 'deleted']);
+      $this->redirect('/systemNotes/', ['before' => 'deleted']);
     }
 
     $this->view->render(
@@ -104,7 +104,7 @@ class NoteController extends AbstractController
   {
     $noteId = (int) $this->request->getParam('id');
     if (!$noteId) {
-      $this->redirect('/', ['error' => 'missingNoteId']);
+      $this->redirect('/systemNotes/', ['error' => 'missingNoteId']);
     }
 
     return $this->noteModel->get($noteId);

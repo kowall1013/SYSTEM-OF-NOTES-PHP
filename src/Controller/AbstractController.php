@@ -49,7 +49,7 @@ abstract class AbstractController
       // Log::error($e->getPrevios());
       $this->view->render('error', ['message' => $e->getMessage()]);
     } catch (NotFoundException $e) {
-      $this->redirect('/', ['error' => 'noteNotFound']);
+      $this->redirect('/systemNotes/', ['error' => 'noteNotFound']);
     }
   }
 
